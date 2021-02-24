@@ -1,4 +1,3 @@
-package lab5Edits;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -230,7 +229,7 @@ public class DoublyCircularLinkedList<T> implements DequeInterface<T>, Iterable<
 	
 	private Node getNodeAt(int index) {
 		Node currentNode = firstNode;
-		// Assertion: (!isEmpty()) && (pos >= 0) && (pos < size)
+		// Assertion: (!isEmpty()) && (index >= 0) && (index < size)
 		for(int i = 0; i < index; i++) {
 			currentNode = currentNode.getNextNode();
 		}
@@ -238,7 +237,7 @@ public class DoublyCircularLinkedList<T> implements DequeInterface<T>, Iterable<
 		return currentNode;
 	}
 	
-	private class LinkedListIterator implements Iterator<T> {		// page 382
+	private class LinkedListIterator implements Iterator<T> {
 		
 		private Node nextNode;
 		private int nodeCount;
