@@ -1,4 +1,3 @@
-package lab5Edits;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +14,7 @@ public class Driver {
 		
 		DoublyCircularLinkedList<String> list = new DoublyCircularLinkedList<>();
 		
-		File myFile = new File("cities.txt");
+		File myFile = new File("cities.txt");			// path to your file
 		
 		try {
 			Scanner scan = new Scanner(myFile);
@@ -47,9 +46,8 @@ public class Driver {
 		    displayListItems(list);
 
 			// Write the contents of the list into a new file called new_cities.txt
-			Path file = Paths.get("new_cities.txt");
+			Path file = Paths.get("new_cities.txt");						// path to your new file
 			Files.write(file, list, StandardCharsets.UTF_8);
-			// Files.write(file, lines, StandardCharsets.UTF_8, StandardOpenOption.APPEND);
 			System.out.println("\nnew_cities.txt file created");
 		    
 		    scan.close();
