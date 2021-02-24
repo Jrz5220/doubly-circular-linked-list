@@ -1,4 +1,3 @@
-package lab5Edits;
 
 /**
  * An interface for the ADT deque.
